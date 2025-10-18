@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aisha Meshitbayeva - Young Entrepreneur & AI Researcher</title>
+    <!-- 
+    HOW TO ADD YOUR IMAGES:
+    
+    1. Create an 'images' folder in the same directory as this HTML file
+    
+    2. Add your images with these exact names:
+       - profile.jpg (your photo in pink shirt with Kazakhstan folder)
+       - lewis-certificate.jpg (Lewis School certificate)
+       - elicamps-certificate.jpg (Elicamps report card)
+       - mytrade-letter.jpg (MyTrade.kz recommendation letter)
+       - zerde-certificate.jpg (Zerde School certificate)
+       - kazakhstan-pride.jpg (photo with Kazakhstan representation)
+       - Any other certificates you want to add
+    
+    3. The website will automatically display them!
+       If images are missing, it will show emoji placeholders instead.
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #6366f1;
+            --secondary: #ec4899;
+            --accent: #14b8a6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Language Selector */
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 25px;
+            padding: 0.3rem;
+        }
+        
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: transparent;
+            color: var(--dark);
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .lang-btn:hover:not(.active) {
+            background: rgba(99, 102, 241, 0.1);
+        }
+        
+        /* Hide/Show based on language */
+        [data-lang] {
+            display: none;
+        }
+        
+        [data-lang].active {
+            display: block;
+        }
+        
+        .inline-lang {
+            display: none;
+        }
+        
+        .inline-lang.active {
+            display: inline;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile menu button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: var(--dark);
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 2rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+            animation: slideInLeft 0.8s ease;
+        }
+        
+        .hero-content h2 {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            animation: slideInLeft 1s ease;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            animation: slideInLeft 1.2s ease;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            animation: slideInLeft 1.4s ease;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: slideInRight 1s ease;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .profile-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #f093fb, #f5576c, #4facfe);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.5;
+            animation: gradient-rotate 3s linear infinite;
+        }
+        
+        @keyframes gradient-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            overflow: hidden;
+            position: relative;
+            border: 4px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .about-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .about-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        /* Projects Section */
+        .projects {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .project-card {
+            background: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-header {
+            padding: 2rem;
+            background: var(--gradient);
+            color: white;
+        }
+        
+        .project-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-header .project-type {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .project-body {
+            padding: 2rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        /* Timeline */
+        .timeline {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+        
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--gradient);
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            width: calc(50% - 30px);
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 30px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 30px;
+            text-align: right;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-date {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Skills Section */
+        .skills-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .skill-category {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .skill-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Certificates Section */
+        .certificates {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+        
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .certificate-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .certificate-card::before {
+            content: '🔍';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+            pointer-events: none;
+        }
+        
+        .certificate-card:hover::before {
+            opacity: 0.8;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .certificate-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .certificate-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: white;
+            transition: transform 0.3s ease;
+        }
+        
+        .certificate-card:hover .certificate-image img {
+            transform: scale(1.05);
+        }
+        
+        .certificate-info {
+            padding: 1.5rem;
+        }
+        
+        .certificate-info h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .certificate-info p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .certificate-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--gradient);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        /* Modal for certificate viewing */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            max-height: 80%;
+            margin-top: 5%;
+            animation: zoomIn 0.3s ease;
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0.7); }
+            to { transform: scale(1); }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            color: var(--primary);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .timeline-container::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column !important;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 50px);
+                margin-left: 50px !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+            
+            .language-selector {
+                scale: 0.9;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AM</div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li>
+                        <a href="#home">
+                            <span class="inline-lang active" data-lang="en">Home</span>
+                            <span class="inline-lang" data-lang="ru">Главная</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <span class="inline-lang active" data-lang="en">About</span>
+                            <span class="inline-lang" data-lang="ru">О себе</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects">
+                            <span class="inline-lang active" data-lang="en">Projects</span>
+                            <span class="inline-lang" data-lang="ru">Проекты</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills">
+                            <span class="inline-lang active" data-lang="en">Skills</span>
+                            <span class="inline-lang" data-lang="ru">Навыки</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#certificates">
+                            <span class="inline-lang active" data-lang="en">Certificates</span>
+                            <span class="inline-lang" data-lang="ru">Сертификаты</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#achievements">
+                            <span class="inline-lang active" data-lang="en">Journey</span>
+                            <span class="inline-lang" data-lang="ru">Путь</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <span class="inline-lang active" data-lang="en">Contact</span>
+                            <span class="inline-lang" data-lang="ru">Контакты</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="language-selector">
+                    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="setLanguage('ru')">RU</button>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- English Version -->
+                <div data-lang="en" class="active">
+                    <h1>Aisha Meshitbayeva</h1>
+                    <h2>Young Entrepreneur & AI Researcher</h2>
+                    <p>16-year-old innovator from Kazakhstan, building AI solutions for education and business while pursuing academic excellence.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <!-- Russian Version -->
+                <div data-lang="ru">
+                    <h1>Айша Мешитбаева</h1>
+                    <h2>Молодой Предприниматель и Исследователь ИИ</h2>
+                    <p>16-летний инноватор из Казахстана, создающий решения на основе ИИ для образования и бизнеса, стремящийся к академическому совершенству.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Мои Проекты</a>
+                        <a href="#contact" class="btn btn-secondary">Связаться</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <!-- Replace 'images/profile.jpg' with your actual image path -->
+                        <img src="images/profile.jpg" alt="Aisha Meshitbayeva" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size: 4rem;\'>AM</span>';">
+                    </div>
+                    <h3 style="text-align: center;">
+                        <span class="inline-lang active" data-lang="en">Aisha Meshitbayeva</span>
+                        <span class="inline-lang" data-lang="ru">Айша Мешитбаева</span>
+                    </h3>
+                    <p style="text-align: center; color: #64748b;">
+                        <span class="inline-lang active" data-lang="en">Founder, Researcher, Student</span>
+                        <span class="inline-lang" data-lang="ru">Основатель, Исследователь, Студент</span>
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-value">15+</div>
+                            <div class="stat-label">
+                                <span class="inline-lang active" data-lang="en">Awards Earned</span>
+                                <span class="inline-lang" data-lang="ru">Наград получено</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">25</div>
+                            <div class="stat-label">
+                                <span class="inline-lang active" data-lang="en">Courses Studied</span>
+                                <span class="inline-lang" data-lang="ru">Курсов изучено</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">4.69</div>
+                            <div class="stat-label">GPA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="inline-lang active" data-lang="en">About Me</span>
+                <span class="inline-lang" data-lang="ru">Обо мне</span>
+            </h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🚀</div>
+                    <h3>
+                        <span class="inline-lang active" data-lang="en">Entrepreneur</span>
+                        <span class="inline-lang" data-lang="ru">Предприниматель</span>
+                    </h3>
+                    <p>
+                        <span class="inline-lang active" data-lang="en">Founded ClearDemand, an AI-powered demand forecasting startup achieving 87% prediction accuracy for SMEs in Kazakhstan.</span>
+                        <span class="inline-lang" data-lang="ru">Основала ClearDemand - стартап с ИИ-прогнозированием спроса, достигающий 87% точности прогнозов для МСБ в Казахстане.</span>
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🔬</div>
+                    <h3>
+                        <span class="inline-lang active" data-lang="en">Researcher</span>
+                        <span class="inline-lang" data-lang="ru">Исследователь</span>
+                    </h3>
+                    <p>
+                        <span class="inline-lang active" data-lang="en">Published research on AI in education, presenting at international symposium in Tokyo. Focused on enhancing educational outcomes through technology.</span>
+                        <span class="inline-lang" data-lang="ru">Опубликовала исследование об ИИ в образовании, выступаю на международном симпозиуме в Токио. Фокус на улучшении образовательных результатов через технологии.</span>
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🎓</div>
+                    <h3>
+                        <span class="inline-lang active" data-lang="en">Student</span>
+                        <span class="inline-lang" data-lang="ru">Студент</span>
+                    </h3>
+                    <p>
+                        <span class="inline-lang active" data-lang="en">High school senior at ZAMAN School with 4.69 GPA, balancing academics with entrepreneurship, athletics, and volunteer work.</span>
+                        <span class="inline-lang" data-lang="ru">Ученица выпускного класса школы ZAMAN с GPA 4.69, совмещающая учебу с предпринимательством, спортом и волонтерством.</span>
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🌏</div>
+                    <h3>
+                        <span class="inline-lang active" data-lang="en">Global Citizen</span>
+                        <span class="inline-lang" data-lang="ru">Гражданин мира</span>
+                    </h3>
+                    <p>
+                        <span class="inline-lang active" data-lang="en">UNICEF volunteer, trilingual speaker (Kazakh, Russian, English), committed to improving education and sustainability in Kazakhstan.</span>
+                        <span class="inline-lang" data-lang="ru">Волонтер ЮНИСЕФ, владею тремя языками (казахский, русский, английский), стремлюсь улучшить образование и устойчивое развитие в Казахстане.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="inline-lang active" data-lang="en">Featured Projects</span>
+                <span class="inline-lang" data-lang="ru">Избранные проекты</span>
+            </h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ClearDemand</h3>
+                        <p class="project-type">
+                            <span class="inline-lang active" data-lang="en">AI Startup - Founder</span>
+                            <span class="inline-lang" data-lang="ru">ИИ Стартап - Основатель</span>
+                        </p>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            <span class="inline-lang active" data-lang="en">AI-powered demand forecasting platform helping SMEs predict product demand with 87% accuracy. Leading a team of 5, partnered with local businesses for validation.</span>
+                            <span class="inline-lang" data-lang="ru">Платформа прогнозирования спроса на основе ИИ, помогающая МСБ предсказывать спрос с точностью 87%. Руковожу командой из 5 человек, партнерство с местным бизнесом.</span>
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Business Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>
+                            <span class="inline-lang active" data-lang="en">AI in Kazakhstan Schools</span>
+                            <span class="inline-lang" data-lang="ru">ИИ в школах Казахстана</span>
+                        </h3>
+                        <p class="project-type">
+                            <span class="inline-lang active" data-lang="en">Research Publication</span>
+                            <span class="inline-lang" data-lang="ru">Научная публикация</span>
+                        </p>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            <span class="inline-lang active" data-lang="en">Comprehensive study on implementing AI in 25 schools across Kazakhstan. Mixed-methods research with 114 teachers and 308 students. Presenting at Tokyo symposium.</span>
+                            <span class="inline-lang" data-lang="ru">Комплексное исследование внедрения ИИ в 25 школах Казахстана. Смешанные методы исследования с участием 114 учителей и 308 учеников. Презентация на симпозиуме в Токио.</span>
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">
+                                <span class="inline-lang active" data-lang="en">Education</span>
+                                <span class="inline-lang" data-lang="ru">Образование</span>
+                            </span>
+                            <span class="tag">
+                                <span class="inline-lang active" data-lang="en">AI Research</span>
+                                <span class="inline-lang" data-lang="ru">Исследование ИИ</span>
+                            </span>
+                            <span class="tag">
+                                <span class="inline-lang active" data-lang="en">Data Analysis</span>
+                                <span class="inline-lang" data-lang="ru">Анализ данных</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>GreenCycle App</h3>
+                        <p class="project-type">
+                            <span class="inline-lang active" data-lang="en">Environmental Tech</span>
+                            <span class="inline-lang" data-lang="ru">Экологические технологии</span>
+                        </p>
+                    </div>
+                    <div class="project-body">
+                        <p>
+                            <span class="inline-lang active" data-lang="en">Finalist in Citizen Entrepreneurship Competition 2025. Mobile app for plastic recycling with collection point mapping and reward system for sustainable practices.</span>
+                            <span class="inline-lang" data-lang="ru">Финалист конкурса Citizen Entrepreneurship 2025. Мобильное приложение для переработки пластика с картой пунктов сбора и системой вознаграждений.</span>
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">
+                                <span class="inline-lang active" data-lang="en">Sustainability</span>
+                                <span class="inline-lang" data-lang="ru">Устойчивое развитие</span>
+                            </span>
+                            <span class="tag">
+                                <span class="inline-lang active" data-lang="en">Mobile Development</span>
+                                <span class="inline-lang" data-lang="ru">Мобильная разработка</span>
+                            </span>
+                            <span class="tag">
+                                <span class="inline-lang active" data-lang="en">Social Impact</span>
+                                <span class="inline-lang" data-lang="ru">Социальное влияние</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="inline-lang active" data-lang="en">Skills & Expertise</span>
+                <span class="inline-lang" data-lang="ru">Навыки и экспертиза</span>
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>
+                        <span class="inline-lang active" data-lang="en">Technical Skills</span>
+                        <span class="inline-lang" data-lang="ru">Технические навыки</span>
+                    </h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Python Programming</span>
+                            <span class="inline-lang" data-lang="ru">Программирование Python</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">HTML & Web Development</span>
+                            <span class="inline-lang" data-lang="ru">HTML и веб-разработка</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">SEO Optimization</span>
+                            <span class="inline-lang" data-lang="ru">SEO оптимизация</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Machine Learning</span>
+                            <span class="inline-lang" data-lang="ru">Машинное обучение</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Data Analysis</span>
+                            <span class="inline-lang" data-lang="ru">Анализ данных</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">UX Research</span>
+                            <span class="inline-lang" data-lang="ru">UX исследования</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <span class="inline-lang active" data-lang="en">Business Skills</span>
+                        <span class="inline-lang" data-lang="ru">Бизнес навыки</span>
+                    </h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Startup Management</span>
+                            <span class="inline-lang" data-lang="ru">Управление стартапом</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Digital Marketing</span>
+                            <span class="inline-lang" data-lang="ru">Цифровой маркетинг</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Market Research</span>
+                            <span class="inline-lang" data-lang="ru">Маркетинговые исследования</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Strategic Planning</span>
+                            <span class="inline-lang" data-lang="ru">Стратегическое планирование</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Team Leadership</span>
+                            <span class="inline-lang" data-lang="ru">Лидерство в команде</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Product Development</span>
+                            <span class="inline-lang" data-lang="ru">Разработка продуктов</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <span class="inline-lang active" data-lang="en">Languages</span>
+                        <span class="inline-lang" data-lang="ru">Языки</span>
+                    </h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Kazakh (Native)</span>
+                            <span class="inline-lang" data-lang="ru">Казахский (родной)</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Russian (Fluent)</span>
+                            <span class="inline-lang" data-lang="ru">Русский (свободно)</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">English (C1/IELTS 7.0)</span>
+                            <span class="inline-lang" data-lang="ru">Английский (C1/IELTS 7.0)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <span class="inline-lang active" data-lang="en">Other Interests</span>
+                        <span class="inline-lang" data-lang="ru">Другие интересы</span>
+                    </h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Taekwondo (Black Belt)</span>
+                            <span class="inline-lang" data-lang="ru">Тхэквондо (черный пояс)</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Equestrian Sports</span>
+                            <span class="inline-lang" data-lang="ru">Конный спорт</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Digital Art</span>
+                            <span class="inline-lang" data-lang="ru">Цифровое искусство</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Volunteering</span>
+                            <span class="inline-lang" data-lang="ru">Волонтерство</span>
+                        </li>
+                        <li>
+                            <span class="inline-lang active" data-lang="en">Public Speaking</span>
+                            <span class="inline-lang" data-lang="ru">Публичные выступления</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="inline-lang active" data-lang="en">Certificates & Recognition</span>
+                <span class="inline-lang" data-lang="ru">Сертификаты и признание</span>
+            </h2>
+            <div class="certificates-grid">
+                <div class="certificate-card" onclick="openModal('images/lewis-certificate.jpg')">
+                    <div class="certificate-badge">2019</div>
+                    <div class="certificate-image">
+                        <img src="images/lewis-certificate.jpg" alt="Lewis School Certificate" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align: center; padding: 2rem; color: #64748b;\'><div style=\'font-size: 3rem; margin-bottom: 1rem;\'>📚</div><p>Lewis School of English<br/>Certificate</p></div>';">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>
+                            <span class="inline-lang active" data-lang="en">Lewis School of English</span>
+                            <span class="inline-lang" data-lang="ru">Школа английского Lewis</span>
+                        </h4>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">Kids' Camp Programme - 51 hours of English study in Reading Centre, UK</span>
+                            <span class="inline-lang" data-lang="ru">Программа детского лагеря - 51 час изучения английского в Рединге, Великобритания</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('images/elicamps-certificate.jpg')">
+                    <div class="certificate-badge">2023</div>
+                    <div class="certificate-image">
+                        <img src="images/elicamps-certificate.jpg" alt="Elicamps Certificate" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align: center; padding: 2rem; color: #64748b;\'><div style=\'font-size: 3rem; margin-bottom: 1rem;\'>🏆</div><p>Elicamps<br/>Academic Excellence</p></div>';">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>
+                            <span class="inline-lang active" data-lang="en">Elicamps Toronto</span>
+                            <span class="inline-lang" data-lang="ru">Elicamps Торонто</span>
+                        </h4>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">B2 Level Completion - Excellence in all English literacy skills</span>
+                            <span class="inline-lang" data-lang="ru">Завершение уровня B2 - Отличные результаты по всем навыкам английского</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('images/mytrade-letter.jpg')">
+                    <div class="certificate-badge">2025</div>
+                    <div class="certificate-image">
+                        <img src="images/mytrade-letter.jpg" alt="MyTrade Recommendation" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align: center; padding: 2rem; color: #64748b;\'><div style=\'font-size: 3rem; margin-bottom: 1rem;\'>💼</div><p>MyTrade.kz<br/>Recommendation</p></div>';">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>
+                            <span class="inline-lang active" data-lang="en">SEO Excellence</span>
+                            <span class="inline-lang" data-lang="ru">Превосходство в SEO</span>
+                        </h4>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">Professional recommendation for exceptional analytical skills and SEO expertise</span>
+                            <span class="inline-lang" data-lang="ru">Профессиональная рекомендация за исключительные аналитические навыки и экспертизу в SEO</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('images/zerde-certificate.jpg')">
+                    <div class="certificate-badge">2022</div>
+                    <div class="certificate-image">
+                        <img src="images/zerde-certificate.jpg" alt="Zerde School Certificate" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align: center; padding: 2rem; color: #64748b;\'><div style=\'font-size: 3rem; margin-bottom: 1rem;\'>🎓</div><p>Zerde School<br/>Certificate</p></div>';">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>
+                            <span class="inline-lang active" data-lang="en">Academic Achievement</span>
+                            <span class="inline-lang" data-lang="ru">Академические достижения</span>
+                        </h4>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">Excellence in Science and Mathematics in English language instruction</span>
+                            <span class="inline-lang" data-lang="ru">Отличные результаты в науке и математике с обучением на английском языке</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="certificate-card" onclick="openModal('images/kazakhstan-pride.jpg')">
+                    <div class="certificate-badge">
+                        <span class="inline-lang active" data-lang="en">Featured</span>
+                        <span class="inline-lang" data-lang="ru">Избранное</span>
+                    </div>
+                    <div class="certificate-image">
+                        <img src="images/kazakhstan-pride.jpg" alt="Kazakhstan Representation" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align: center; padding: 2rem; color: #64748b;\'><div style=\'font-size: 3rem; margin-bottom: 1rem;\'>🌟</div><p><span class=\'inline-lang active\' data-lang=\'en\'>Kazakhstan Representation</span><span class=\'inline-lang\' data-lang=\'ru\'>Представление Казахстана</span></p></div>';">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>
+                            <span class="inline-lang active" data-lang="en">National Pride</span>
+                            <span class="inline-lang" data-lang="ru">Национальная гордость</span>
+                        </h4>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">Representing Kazakhstan in international competitions and conferences</span>
+                            <span class="inline-lang" data-lang="ru">Представление Казахстана на международных конкурсах и конференциях</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Timeline -->
+    <section id="achievements" class="timeline">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="inline-lang active" data-lang="en">My Journey</span>
+                <span class="inline-lang" data-lang="ru">Мой путь</span>
+            </h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>
+                            <span class="inline-lang active" data-lang="en">ClearDemand Founded</span>
+                            <span class="inline-lang" data-lang="ru">Основание ClearDemand</span>
+                        </h3>
+                        <p class="timeline-date">
+                            <span class="inline-lang active" data-lang="en">January 2025</span>
+                            <span class="inline-lang" data-lang="ru">Январь 2025</span>
+                        </p>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">Launched AI startup achieving 87% prediction accuracy</span>
+                            <span class="inline-lang" data-lang="ru">Запустила ИИ стартап с точностью прогнозов 87%</span>
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>
+                            <span class="inline-lang active" data-lang="en">Research Published</span>
+                            <span class="inline-lang" data-lang="ru">Публикация исследования</span>
+                        </h3>
+                        <p class="timeline-date">2025</p>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">Curieux Academic Journal - AI in Education</span>
+                            <span class="inline-lang" data-lang="ru">Curieux Academic Journal - ИИ в образовании</span>
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>
+                            <span class="inline-lang active" data-lang="en">International Finalist</span>
+                            <span class="inline-lang" data-lang="ru">Международный финалист</span>
+                        </h3>
+                        <p class="timeline-date">
+                            <span class="inline-lang active" data-lang="en">August 2025</span>
+                            <span class="inline-lang" data-lang="ru">Август 2025</span>
+                        </p>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">Citizen Entrepreneurship Competition - Berlin</span>
+                            <span class="inline-lang" data-lang="ru">Конкурс Citizen Entrepreneurship - Берлин</span>
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>IELTS 7.0</h3>
+                        <p class="timeline-date">
+                            <span class="inline-lang active" data-lang="en">June 2025</span>
+                            <span class="inline-lang" data-lang="ru">Июнь 2025</span>
+                        </p>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">C1 English Proficiency Achieved</span>
+                            <span class="inline-lang" data-lang="ru">Достигнут уровень английского C1</span>
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>
+                            <span class="inline-lang active" data-lang="en">SEO Specialist</span>
+                            <span class="inline-lang" data-lang="ru">SEO специалист</span>
+                        </h3>
+                        <p class="timeline-date">
+                            <span class="inline-lang active" data-lang="en">August 2025</span>
+                            <span class="inline-lang" data-lang="ru">Август 2025</span>
+                        </p>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">MyTrade.kz - 15% traffic increase</span>
+                            <span class="inline-lang" data-lang="ru">MyTrade.kz - рост трафика на 15%</span>
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>
+                            <span class="inline-lang active" data-lang="en">Tokyo Symposium</span>
+                            <span class="inline-lang" data-lang="ru">Симпозиум в Токио</span>
+                        </h3>
+                        <p class="timeline-date">
+                            <span class="inline-lang active" data-lang="en">November 2025</span>
+                            <span class="inline-lang" data-lang="ru">Ноябрь 2025</span>
+                        </p>
+                        <p>
+                            <span class="inline-lang active" data-lang="en">International presentation on AI in education</span>
+                            <span class="inline-lang" data-lang="ru">Международная презентация об ИИ в образовании</span>
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="inline-lang active" data-lang="en">Let's Connect</span>
+                <span class="inline-lang" data-lang="ru">Давайте свяжемся</span>
+            </h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                <span class="inline-lang active" data-lang="en">I'm always excited to discuss AI, education, and entrepreneurship opportunities!</span>
+                <span class="inline-lang" data-lang="ru">Всегда рада обсудить возможности в сфере ИИ, образования и предпринимательства!</span>
+            </p>
+            <div class="contact-links">
+                <a href="mailto:aisha.meshitbayeva@gmail.com" class="contact-link">
+                    <span>📧</span> Email
+                </a>
+                <a href="tel:+77772007079" class="contact-link">
+                    <span>📱</span> 
+                    <span class="inline-lang active" data-lang="en">Phone</span>
+                    <span class="inline-lang" data-lang="ru">Телефон</span>
+                </a>
+            </div>
+            <p style="margin-top: 3rem; opacity: 0.8;">
+                <span class="inline-lang active" data-lang="en">Based in Almaty, Kazakhstan 🇰🇿</span>
+                <span class="inline-lang" data-lang="ru">Алматы, Казахстан 🇰🇿</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Language switching functionality
+        function setLanguage(lang) {
+            // Save preference
+            localStorage.setItem('preferred-language', lang);
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase() === lang.toLowerCase() || 
+                    (btn.textContent === 'EN' && lang === 'en') || 
+                    (btn.textContent === 'RU' && lang === 'ru')) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Update content visibility
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                if (element.dataset.lang === lang) {
+                    element.classList.add('active');
+                } else {
+                    element.classList.remove('active');
+                }
+            });
+            
+            // Update page title
+            document.title = lang === 'ru' 
+                ? 'Айша Мешитбаева - Молодой Предприниматель и Исследователь ИИ'
+                : 'Aisha Meshitbayeva - Young Entrepreneur & AI Researcher';
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+        }
+        
+        // Initialize with saved preference or default to English
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferred-language') || 'en';
+            setLanguage(savedLang);
+        });
+        
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        // Smooth scroll animation for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu after clicking
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.15)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.about-card, .project-card, .skill-category, .timeline-item, .certificate-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add typing effect to hero title (only for active language)
+        function typeWriter(element) {
+            const text = element.textContent;
+            element.textContent = '';
+            let index = 0;
+
+            function type() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, 50);
+                }
+            }
+            
+            type();
+        }
+
+        // Apply typing effect on load and language change
+        setTimeout(() => {
+            const activeTitle = document.querySelector('.hero-content [data-lang].active h1');
+            if (activeTitle) {
+                typeWriter(activeTitle);
+            }
+        }, 500);
+
+        // Add counter animation to stats
+        function animateCounter(element, target, duration = 1000) {
+            const text = element.textContent;
+            const hasPlus = text.includes('+');
+            const numericValue = parseFloat(text.replace('+', ''));
+            
+            if (isNaN(numericValue)) {
+                return;
+            }
+            
+            const start = 0;
+            const increment = numericValue / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= numericValue) {
+                    element.textContent = hasPlus ? numericValue + '+' : numericValue;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Trigger counter animation when stats come into view
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.animated) {
+                    animateCounter(entry.target, 0);
+                    entry.target.animated = true;
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-value').forEach(stat => {
+            statsObserver.observe(stat);
+        });
+        
+        // Certificate modal functionality
+        const modal = document.getElementById('certificateModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalClose = document.getElementsByClassName('modal-close')[0];
+        
+        // Function to open modal with specific image
+        window.openModal = function(imageSrc) {
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+        }
+        
+        modalClose.onclick = function() {
+            modal.style.display = 'none';
+        }
+        
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
