@@ -123,6 +123,7 @@
             font-weight: 700;
             background: var(--gradient);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
@@ -802,6 +803,44 @@
             color: var(--primary);
         }
         
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .mobile-menu-btn {
@@ -975,7 +1014,7 @@
                             </div>
                         </div>
                         <div class="stat">
-                            <div class="stat-value">4.69</div>
+                            <div class="stat-value">4.9</div>
                             <div class="stat-label">GPA</div>
                         </div>
                     </div>
@@ -1021,8 +1060,8 @@
                         <span class="inline-lang" data-lang="ru">Студент</span>
                     </h3>
                     <p>
-                        <span class="inline-lang active" data-lang="en">High school senior at ZAMAN School with 4.69 GPA, balancing academics with entrepreneurship, athletics, and volunteer work.</span>
-                        <span class="inline-lang" data-lang="ru">Ученица выпускного класса школы ZAMAN с GPA 4.69, совмещающая учебу с предпринимательством, спортом и волонтерством.</span>
+                        <span class="inline-lang active" data-lang="en">High school senior at ZAMAN School with 4.9 GPA, balancing academics with entrepreneurship, athletics, and volunteer work.</span>
+                        <span class="inline-lang" data-lang="ru">Ученица выпускного класса школы ZAMAN с GPA 4.9, совмещающая учебу с предпринимательством, спортом и волонтерством.</span>
                     </p>
                 </div>
                 <div class="about-card">
@@ -1043,8 +1082,8 @@
                         <span class="inline-lang" data-lang="ru">Актриса и творческая личность</span>
                     </h3>
                     <p>
-                        <span class="inline-lang active" data-lang="en">Passionate about acting and creative expression. Participated in UNICEF's Alternativa Film Project and various theatrical performances, developing communication and storytelling skills.</span>
-                        <span class="inline-lang" data-lang="ru">Увлечена актерским мастерством и творческим самовыражением. Участвовала в киносъемочном проекте ЮНИСЕФ "Альтернатива" и различных театральных постановках, развивая навыки коммуникации и повествования.</span>
+                        <span class="inline-lang active" data-lang="en">Passionate about acting and creative expression. Created two short films on social topics and participated in various theatrical performances, developing communication and storytelling skills.</span>
+                        <span class="inline-lang" data-lang="ru">Увлечена актерским мастерством и творческим самовыражением. Сняла два короткометражных фильма на социальные темы и участвовала в театральных постановках, развивая навыки коммуникации и повествования.</span>
                     </p>
                 </div>
             </div>
@@ -1092,8 +1131,14 @@
                     </div>
                     <div class="project-body">
                         <p>
-                            <span class="inline-lang active" data-lang="en">Comprehensive study on implementing AI in 25 schools across Kazakhstan. Mixed-methods research with 114 teachers and 308 students. Presenting at Tokyo symposium.</span>
-                            <span class="inline-lang" data-lang="ru">Комплексное исследование внедрения ИИ в 25 школах Казахстана. Смешанные методы исследования с участием 114 учителей и 308 учеников. Презентация на симпозиуме в Токио.</span>
+                            <span class="inline-lang active" data-lang="en">Comprehensive study on implementing AI in 25 schools across Kazakhstan. Mixed-methods research with 114 teachers and 308 students. Published in Scopus-indexed journal: "Applying AI in the High Schools of Kazakhstan: A Strategic Approach to Enhancing Educational Outcomes" (Computational Intelligence and Machine Learning, Forthcoming). Conducted volunteer teaching hours as part of the research implementation.</span>
+                            <span class="inline-lang" data-lang="ru">Комплексное исследование внедрения ИИ в 25 школах Казахстана. Смешанные методы исследования с участием 114 учителей и 308 учеников. Опубликовано в журнале, индексируемом в Scopus: "Применение ИИ в средних школах Казахстана: стратегический подход к улучшению образовательных результатов" (Computational Intelligence and Machine Learning, Forthcoming). Проведены волонтерские часы преподавания в рамках реализации исследования.</span>
+                        </p>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b;">
+                            <a href="https://academicresearchlibrary.com/abstract-detail/3654" target="_blank" style="color: var(--primary); text-decoration: none;">
+                                <span class="inline-lang active" data-lang="en">View Publication →</span>
+                                <span class="inline-lang" data-lang="ru">Посмотреть публикацию →</span>
+                            </a>
                         </p>
                         <div class="project-tags">
                             <span class="tag">
@@ -1105,8 +1150,12 @@
                                 <span class="inline-lang" data-lang="ru">Исследование ИИ</span>
                             </span>
                             <span class="tag">
-                                <span class="inline-lang active" data-lang="en">Data Analysis</span>
-                                <span class="inline-lang" data-lang="ru">Анализ данных</span>
+                                <span class="inline-lang active" data-lang="en">Scopus Publication</span>
+                                <span class="inline-lang" data-lang="ru">Публикация в Scopus</span>
+                            </span>
+                            <span class="tag">
+                                <span class="inline-lang active" data-lang="en">Volunteer Teaching</span>
+                                <span class="inline-lang" data-lang="ru">Волонтерское преподавание</span>
                             </span>
                         </div>
                     </div>
@@ -1528,6 +1577,74 @@
                 </div>
             </div>
 
+            <div class="certificate-card" onclick="openModal('images/Aisha Meshitbayeva Debate Spaces Tournament Dec2025 Certificate.jpg')">
+                <div class="certificate-badge">2025</div>
+                <div class="certificate-image">
+                    <img src="images/Aisha Meshitbayeva Debate Spaces Tournament Dec2025 Certificate.jpg" alt="Debate Spaces Tournament Certificate" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align: center; padding: 2rem; color: #64748b;\'><div style=\'font-size: 3rem; margin-bottom: 1rem;\'>💬</div><p>Debate Spaces Tournament</p></div>';">
+                </div>
+                <div class="certificate-info">
+                    <h4>
+                        <span class="inline-lang active" data-lang="en">Debate Spaces Tournament</span>
+                        <span class="inline-lang" data-lang="ru">Турнир Debate Spaces</span>
+                    </h4>
+                    <p>
+                        <span class="inline-lang active" data-lang="en">December 2025</span>
+                        <span class="inline-lang" data-lang="ru">Декабрь 2025</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="certificate-card" onclick="openModal('images/Aisha Meshitbayeva Debate Spaces Tournament Dec2025 Certificate 2.jpg')">
+                <div class="certificate-badge">2025</div>
+                <div class="certificate-image">
+                    <img src="images/Aisha Meshitbayeva Debate Spaces Tournament Dec2025 Certificate 2.jpg" alt="Debate Spaces Tournament Certificate 2" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align: center; padding: 2rem; color: #64748b;\'><div style=\'font-size: 3rem; margin-bottom: 1rem;\'>💬</div><p>Debate Spaces Tournament</p></div>';">
+                </div>
+                <div class="certificate-info">
+                    <h4>
+                        <span class="inline-lang active" data-lang="en">Debate Spaces Tournament</span>
+                        <span class="inline-lang" data-lang="ru">Турнир Debate Spaces</span>
+                    </h4>
+                    <p>
+                        <span class="inline-lang active" data-lang="en">December 2025</span>
+                        <span class="inline-lang" data-lang="ru">Декабрь 2025</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="certificate-card" onclick="openModal('images/Aisha Meshitbayeva Recomendation MSDC Math Learning Center.jpg')">
+                <div class="certificate-badge">📚</div>
+                <div class="certificate-image">
+                    <img src="images/Aisha Meshitbayeva Recomendation MSDC Math Learning Center.jpg" alt="MSDC Math Learning Center Recommendation" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align: center; padding: 2rem; color: #64748b;\'><div style=\'font-size: 3rem; margin-bottom: 1rem;\'>📚</div><p>MSDC Math Learning Center</p></div>';">
+                </div>
+                <div class="certificate-info">
+                    <h4>
+                        <span class="inline-lang active" data-lang="en">MSDC Math Learning Center</span>
+                        <span class="inline-lang" data-lang="ru">Центр обучения математике MSDC</span>
+                    </h4>
+                    <p>
+                        <span class="inline-lang active" data-lang="en">Recommendation Letter</span>
+                        <span class="inline-lang" data-lang="ru">Рекомендательное письмо</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="certificate-card" onclick="openModal('images/International Symposium on Teaching, Education, and Learning.jpg')">
+                <div class="certificate-badge">2025</div>
+                <div class="certificate-image">
+                    <img src="images/International Symposium on Teaching, Education, and Learning.jpg" alt="International Symposium Certificate" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'text-align: center; padding: 2rem; color: #64748b;\'><div style=\'font-size: 3rem; margin-bottom: 1rem;\'>🌏</div><p>International Symposium</p></div>';">
+                </div>
+                <div class="certificate-info">
+                    <h4>
+                        <span class="inline-lang active" data-lang="en">International Symposium</span>
+                        <span class="inline-lang" data-lang="ru">Международный симпозиум</span>
+                    </h4>
+                    <p>
+                        <span class="inline-lang active" data-lang="en">Teaching, Education, and Learning - Tokyo 2025</span>
+                        <span class="inline-lang" data-lang="ru">Преподавание, образование и обучение - Токио 2025</span>
+                    </p>
+                </div>
+            </div>
+
             <div class="certificate-card">
                 <div class="certificate-badge">✨</div>
                 <div class="certificate-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
@@ -1607,8 +1724,8 @@
                             <span class="inline-lang" data-lang="ru">Август 2025</span>
                         </p>
                         <p>
-                            <span class="inline-lang active" data-lang="en">MyTrade.kz - 15% traffic increase</span>
-                            <span class="inline-lang" data-lang="ru">MyTrade.kz - рост трафика на 15%</span>
+                            <span class="inline-lang active" data-lang="en">Mytrade.kz — growth from 4,000 to 51,000 pages, traffic +500/month, top-1 Google, international reach</span>
+                            <span class="inline-lang" data-lang="ru">Mytrade.kz — рост с 4 000 до 51 000 страниц, трафик +500 в мес., топ-1 Google, международный охват.</span>
                         </p>
                     </div>
                     <div class="timeline-dot"></div>
@@ -1635,8 +1752,8 @@
                         </h3>
                         <p class="timeline-date">2025</p>
                         <p>
-                            <span class="inline-lang active" data-lang="en">Curieux Academic Journal - AI in Education</span>
-                            <span class="inline-lang" data-lang="ru">Curieux Academic Journal - ИИ в образовании</span>
+                            <span class="inline-lang active" data-lang="en">Scopus-indexed publication: "Applying AI in the High Schools of Kazakhstan" (Computational Intelligence and Machine Learning, Forthcoming). Conducted volunteer teaching hours.</span>
+                            <span class="inline-lang" data-lang="ru">Публикация в Scopus: "Применение ИИ в средних школах Казахстана" (Computational Intelligence and Machine Learning, Forthcoming). Проведены волонтерские часы преподавания.</span>
                         </p>
                     </div>
                     <div class="timeline-dot"></div>
@@ -1708,6 +1825,57 @@
                         </p>
                     </div>
                     <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="inline-lang active" data-lang="en">Gallery</span>
+                <span class="inline-lang" data-lang="ru">Галерея</span>
+            </h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('galery/1.jpg')">
+                    <img src="galery/1.jpg" alt="Gallery Image 1" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/2.jpg')">
+                    <img src="galery/2.jpg" alt="Gallery Image 2" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/3.jpg')">
+                    <img src="galery/3.jpg" alt="Gallery Image 3" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/4.jpg')">
+                    <img src="galery/4.jpg" alt="Gallery Image 4" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/5.jpg')">
+                    <img src="galery/5.jpg" alt="Gallery Image 5" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/6.jpg')">
+                    <img src="galery/6.jpg" alt="Gallery Image 6" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/7.jpg')">
+                    <img src="galery/7.jpg" alt="Gallery Image 7" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/8.jpg')">
+                    <img src="galery/8.jpg" alt="Gallery Image 8" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/9.jpg')">
+                    <img src="galery/9.jpg" alt="Gallery Image 9" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/10.jpg')">
+                    <img src="galery/10.jpg" alt="Gallery Image 10" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/11.jpg')">
+                    <img src="galery/11.jpg" alt="Gallery Image 11" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/12.jpg')">
+                    <img src="galery/12.jpg" alt="Gallery Image 12" onerror="this.style.display='none';">
+                </div>
+                <div class="gallery-item" onclick="openModal('galery/13.jpg')">
+                    <img src="galery/13.jpg" alt="Gallery Image 13" onerror="this.style.display='none';">
                 </div>
             </div>
         </div>
